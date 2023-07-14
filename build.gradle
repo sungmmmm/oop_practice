@@ -10,8 +10,14 @@ repositories {
 }
 
 dependencies {
+    implementation 'org.passay:passay:1.6.1'
+    //더 낮은 결합도를 가진 설계 예 의 의존도 passay 라는 java 라이브러리
+
     testImplementation platform('org.junit:junit-bom:5.9.1')
     testImplementation 'org.junit.jupiter:junit-jupiter'
+
+    testImplementation("org.assertj:assertj-core:3.24.2")
+
 }
 
 test {
