@@ -3,6 +3,8 @@ package org.example;
 public class User { //command + n 누르고 test UserTest 만들기
     private String password;
 
+
+
     public void initPassword(PasswordGenerator PasswordGenerator) {
         //컨트롤 할 수 없는 부분을(RandomPasswordGenerator) 외부로(PasswordGenerator)부터 주입 받기 위해서 추가하기
         //RandomPasswordGenerator randomPasswordGenerator = new RandomPasswordGenerator();

@@ -11,6 +11,7 @@ public class RandomPasswordGenerator  implements org.example.PasswordGenerator{
      */
     public static final String ALLOWED_SPL_CHARACTERS = "!@#$%^&*()_+";
 
+
     public static final String ERROR_CODE = "ERRONEOUS_SPECIAL_CHARS";
 
 
@@ -20,6 +21,7 @@ public class RandomPasswordGenerator  implements org.example.PasswordGenerator{
         CharacterData lowerCaseChars = EnglishCharacterData.LowerCase;
         CharacterRule lowerCaseRule = new CharacterRule(lowerCaseChars);
         lowerCaseRule.setNumberOfCharacters(2);
+
 
         CharacterData upperCaseChars = EnglishCharacterData.UpperCase;
         CharacterRule upperCaseRule = new CharacterRule(upperCaseChars);
