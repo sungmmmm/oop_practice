@@ -2,6 +2,7 @@ package org.example;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
 
 import static org.assertj.core.api.Assertions.assertThatCode;
 
@@ -20,10 +21,14 @@ public class PasswordValidatorTest {
                 .doesNotThrowAnyException(); //예외 발생하지 않는다 라는걸 확인하기 위해서
     }
     @DisplayName("비밀번호가 8자 미만 또는 12자 초과하는 경우 IllegalArgumentException 예외가 발생한다.")
+    @ParameterizedTest
+    //testImplementation 'org.junit.jupiter:junit-jupiter-params:5.8.2' bulid. gradle에 추가
     @Test
     void validatePasswordTest2() {
         assertThatCode(() -> PasswordVaildator.validate("aabb"))
                 .isInstanceOf(IllegalArgumentException.class)//assertj 안에 있는 코드임
                 .hasMessage("비밀번호는 최소 8자 이상 12자 이하여야 한다.");
     }
+
+    // 더 낮은 결합도를 가진 설계
 }
